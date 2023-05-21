@@ -22,7 +22,7 @@ const App = () => {
       },
       body: JSON.stringify({
         model: 'text-davinci-003',
-        prompt: `Generate a function from the text I will provide, use javascript (es6) by default if no other programming language is specified Write only the necesary for the function and all in English unless the user specifies another language. Be brief and follow the best practices of the language, do not write code comments, only code. If the information provided in the text is not precise enough to be understood by a human or machine, do not make a function, just write a message intended to make the user understand that he is not being precise and do not comment in the code. This is the text:\n\n ${text}`,
+        prompt: `Generate a function from the text I will provide, use javascript (es6) by default if no other programming language is specified Write only the necesary for the function and all in English unless the user specifies another language. Be brief and follow the best practices of the language, do not write code comments, only code. If the information provided in the text is not precise enough to be understood by a human or machine, do not make a function, just write a message intended to make the user understand that he is not being precise and do not make comments in the code, or write anything additional to valid code for the programming language. This is the text:\n\n ${text}`,
         temperature: 0.5,
         max_tokens: 300,
         frequency_penalty: 0.7,
