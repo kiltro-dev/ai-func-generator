@@ -26,7 +26,7 @@ const Header = () => {
           color: 'transparent',
         }}
       >
-        Provide a brief description of the desired feature in your favorite
+        Provide a brief description of the desired function in your favorite
         language (Eg. Javascript)
       </Text>
     </>
