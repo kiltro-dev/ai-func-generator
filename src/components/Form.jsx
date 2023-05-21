@@ -28,6 +28,7 @@ const Form = ({ generateFunction }) => {
         height={200}
         value={text}
         onChange={(e) => setText(e.target.value)}
+        placeholder="The function should be written in Javascript and it should..."
       />
       <Button
         marginTop={4}
