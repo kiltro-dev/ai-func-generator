@@ -82,7 +82,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   aria-label="Copy"
                   size="xs"
                   position="absolute"
-                  colorScheme='green'
+                  colorScheme='blue'
                   top={4}
                   right={5}
                   onClick={() => {
