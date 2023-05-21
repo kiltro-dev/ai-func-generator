@@ -78,11 +78,11 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   {generatedFunction}
                 </SyntaxHighlighter>
                 <IconButton
-                  icon={<FaClipboard />}
+                  icon={<FaClipboard color="#0C111D" />}
                   aria-label="Copy"
+                  padding={1}
                   size="xs"
                   position="absolute"
-                  colorScheme="gray"
                   top={4}
                   right={5}
                   onClick={() => {
