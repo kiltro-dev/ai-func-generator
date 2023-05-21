@@ -26,6 +26,24 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
     setCopied(false)
   }
 
+  const customStyle = {
+    margin: 0,
+    borderRadius: '4px',
+    width: '100%',
+    height: '100%',
+    fontFamily: 'Fira Code',
+    backgroundColor: '#0C111d',
+  }
+
+  const customTheme = {
+    ...dark,
+    'pre[class*="language-"]': {
+      ...dark['pre[class*="language-"]'],
+      backgroundImage: 'linear(to-b, #06090E, #111824)',
+    },
+  }
+  console.log(dark)
+
   return (
     <Modal
       isOpen={isOpen}
@@ -44,7 +62,9 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
       >
         <ModalHeader>
           <Flex alignItems="center">
-            <Box flex="1">Copy your function</Box>
+            <Box fontWeight={400} fontSize={15} flex="1">
+              Copy your function!
+            </Box>
             <ModalCloseButton />
           </Flex>
         </ModalHeader>
@@ -64,19 +84,13 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
               <Box flexGrow={1} position="relative" width="100%">
                 <SyntaxHighlighter
                   language="javascript"
-                  style={dark}
+                  style={customTheme}
                   showLineNumbers={true}
                   wrapLines={true}
-                  customStyle={{
-                    margin: 0,
-                    borderRadius: '4px',
-                    width: '100%',
-                    height: '100%',
-                    fontFamily: 'Fira Code',
-                    background: '#0C111D',
-                  }}
+                  customStyle={customStyle}
+                  startingLineNumber={1}
                 >
-                  {generatedFunction}
+                  {`${generatedFunction.trim()} \n`}
                 </SyntaxHighlighter>
                 <IconButton
                   icon={<FaClipboard color="#B2EBF2" />}
