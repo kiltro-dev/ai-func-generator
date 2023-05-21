@@ -90,7 +90,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   customStyle={customStyle}
                   startingLineNumber={1}
                 >
-                  {`${generatedFunction.trim()} \n`}
+                  {`\n${generatedFunction.trim()}\n`}
                 </SyntaxHighlighter>
                 <IconButton
                   icon={<FaClipboard color="#B2EBF2" />}
