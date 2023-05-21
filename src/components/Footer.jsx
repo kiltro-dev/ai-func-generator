@@ -6,7 +6,16 @@ const Footer = () => {
     <Box marginTop={50}>
       <Flex justifyContent={'center'} alignItems={'center'}>
         <Image src={logo} marginRight={1} width={5} />
-        <Text>Powered By Open AI</Text>
+        <Text
+          css={{
+            backgroundImage: 'linear-gradient(to right, #d5fdF5, #E1F5FE)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+          }}
+        >
+          Powered By Open AI
+        </Text>
       </Flex>
     </Box>
   )

@@ -26,12 +26,6 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
     setCopied(false)
   }
 
-  const handleKeyDown = (event) => {
-    if (event.key === 'Enter') {
-      // Generar la función aquí
-    }
-  }
-
   return (
     <Modal
       isOpen={isOpen}
@@ -39,13 +33,18 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
         closeModal()
         resetCopiedState()
       }}
-      onKeyDown={handleKeyDown}
+      centerContent
     >
       <ModalOverlay />
-      <ModalContent maxW="3xl">
+      <ModalContent
+        maxW="2xl"
+        bgGradient="linear(to-b, #080C16, #172A46)"
+        boxShadow="rgba(0, 0, 0, 0.7) 0px 20px 30px -10px, rgba(0, 0, 0, 0.5) 0px 1px 8px 0px"
+        color="#FFFFFF"
+      >
         <ModalHeader>
           <Flex alignItems="center">
-            <Box flex="1">{/* Aquí puedes agregar el título deseado */}</Box>
+            <Box flex="1">Copy your function</Box>
             <ModalCloseButton />
           </Flex>
         </ModalHeader>
@@ -81,11 +80,10 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                 <IconButton
                   icon={<FaClipboard />}
                   aria-label="Copy"
-                  size="sm"
-                  colorScheme="blue"
+                  size="xs"
                   position="absolute"
-                  top={2}
-                  right={2}
+                  top={4}
+                  right={5}
                   onClick={() => {
                     onCopy()
                     setCopied(true)

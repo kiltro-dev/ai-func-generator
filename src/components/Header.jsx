@@ -4,11 +4,28 @@ import logo from '../assets/lambda.svg'
 const Header = () => {
   return (
     <>
-      <Image src={logo} width={100} marginBottom={'1rem'} />
-      <Heading color={'white'} marginBottom={'1rem'}>
+      {/* <Image src={logo} width={100} marginBottom={'1rem'} /> */}
+      <Heading
+        css={{
+          backgroundImage: 'linear-gradient(to right, #003366, #00CCFF)',
+          backgroundClip: 'text',
+          color: 'transparent',
+        }}
+        marginBottom={'1rem'}
+      >
         AI Function Generator
       </Heading>
-      <Text fontSize={25} textAlign={'center'}>
+      <Text
+        fontSize={20}
+        textAlign={'center'}
+        fontWeight={'semibold'}
+        css={{
+          backgroundImage: 'linear-gradient(to right, #B2EBF2, #E1F5FE)',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
+          color: 'transparent',
+        }}
+      >
         Provide a brief description of the desired function
       </Text>
     </>
