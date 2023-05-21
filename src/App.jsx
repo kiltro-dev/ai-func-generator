@@ -41,7 +41,13 @@ const App = () => {
 
   const closeModal = () => setIsOpen(false)
   return (
-    <Box bgGradient="linear(to-b, #06090E, #111824)" color={'white'} height={'100vh'} paddingTop={90}>
+    <Box
+      overflowY="hidden"
+      bgGradient="linear(to-b, #06090E, #111824)"
+      color={'white'}
+      height={'100vh'}
+      paddingTop={90}
+    >
       <Container maxW={'3xl'} centerContent>
         <Header />
         <Form generateFunction={generateFunction} />
