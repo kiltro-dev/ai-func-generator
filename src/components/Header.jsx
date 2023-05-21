@@ -16,7 +16,7 @@ const Header = () => {
         AI Function Generator
       </Heading>
       <Text
-        fontSize={20}
+        fontSize={17}
         textAlign={'center'}
         fontWeight={'semibold'}
         css={{
@@ -26,7 +26,8 @@ const Header = () => {
           color: 'transparent',
         }}
       >
-        Provide a brief description of the desired function
+        Provide a brief description of the desired feature in your favorite
+        language (Eg. Javascript)
       </Text>
     </>
   )
