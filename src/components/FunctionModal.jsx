@@ -73,6 +73,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                     width: '100%',
                     height: '100%',
                     fontFamily: 'Fira Code',
+                    background: '#0C111D',
                   }}
                 >
                   {generatedFunction}
@@ -82,7 +83,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   aria-label="Copy"
                   padding={1}
                   size="xs"
-                  colorScheme='blackAlpha'
+                  colorScheme="blackAlpha"
                   position="absolute"
                   top={4}
                   right={5}
