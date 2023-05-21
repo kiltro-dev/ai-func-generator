@@ -78,7 +78,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   {generatedFunction}
                 </SyntaxHighlighter>
                 <IconButton
-                  icon={<FaClipboard color="#0C111D" />}
+                  icon={<FaClipboard color="#00BFFF" />}
                   aria-label="Copy"
                   padding={1}
                   size="xs"
