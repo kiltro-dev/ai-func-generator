@@ -82,7 +82,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   aria-label="Copy"
                   size="xs"
                   position="absolute"
-                  colorScheme='blue'
+                  colorScheme="blue"
                   top={4}
                   right={5}
                   onClick={() => {
@@ -92,8 +92,16 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                 />
               </Box>
               {copied && (
-                <Alert status="success" mt={4}>
-                  <AlertIcon />
+                <Alert
+                  status="success"
+                  mt={4}
+                  variant="solid"
+                  colorScheme="blue"
+                  bgGradient="linear(to-r, #0C111D, #1B2A48)"
+                  borderRadius="md"
+                  color="white"
+                >
+                  <AlertIcon color="green.400" />
                   Copied!
                 </Alert>
               )}
