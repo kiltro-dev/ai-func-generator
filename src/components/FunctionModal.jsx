@@ -33,6 +33,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
     height: '100%',
     fontFamily: 'Fira Code',
     backgroundColor: '#0C111d',
+    paddingTop: '2rem'
   }
 
   const customTheme = {
@@ -40,6 +41,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
     'pre[class*="language-"]': {
       ...dark['pre[class*="language-"]'],
       backgroundImage: 'linear(to-b, #06090E, #111824)',
+      
     },
   }
   console.log(dark)
@@ -90,7 +92,7 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   customStyle={customStyle}
                   startingLineNumber={1}
                 >
-                  {`\n${generatedFunction.trim()}\n`}
+                  {`${generatedFunction.trim()}\n`}
                 </SyntaxHighlighter>
                 <IconButton
                   icon={<FaClipboard color="#B2EBF2" />}
@@ -99,8 +101,8 @@ const FunctionModal = ({ isOpen, closeModal, generatedFunction, loading }) => {
                   size="xs"
                   colorScheme="blackAlpha"
                   position="absolute"
-                  top={4}
-                  right={5}
+                  top={2}
+                  right={2}
                   onClick={() => {
                     onCopy()
                     setCopied(true)
